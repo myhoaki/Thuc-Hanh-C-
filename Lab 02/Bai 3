@@ -1,1 +1,45 @@
+#include <iostream>
+using namespace std;
+struct pheptinh
+{
+	float number1;
+	float number2;
+	char operators;
+};
+void nhap(pheptinh &t)
+{
+	cout<<"Enter first number, operator, second number: ";
+	cin>>t.number1>>t.operators>>t.number2;
+}
+void s(){
+	pheptinh t;
+	nhap(t);
+		switch(t.operators)
+		{
+		case '+' :
+			cout<<"Answer = "<<t.number1+t.number2<<endl;
+		case '-' :
+			cout<<"Answer = "<<t.number1-t.number2<<endl;
+		case '*' :
+			cout<<"Answer = "<<t.number1*t.number2<<endl;
+		case '/' :
+			cout<<"Answer = "<<t.number1/t.number2<<endl;
+		}
+}
+void loop()
+{
+	pheptinh t2;
+	while(true)
+	{
+		nhap(t2);
+		s();
+		char a;
+		cout<<"Do another (y/n)?";cin>>a;
+		if (a=='n') return;
+	}
+}
+int main()
+{
+	loop();
+}
 
