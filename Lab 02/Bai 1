@@ -1,1 +1,24 @@
+#include <iostream>
+using namespace std;
+struct phone
+{
+	int areacode;
+	int exchange;
+	int number;
+};
+void nhap(phone &p)
+{
+	cout<<"Enter your area code, exchange, and number: ";
+	cin>>p.areacode>>p.exchange>>p.number;	
+}
+int main()
+{
+	cout<<"My number is: (***) ****-****"<<endl;
+	phone p;
+	nhap(p);
+	cout<<"Your number is: ("<<p.areacode<<") "<<p.exchange<<"-"<<p.number<<endl;
+	return 0;
+}
+
+
 
