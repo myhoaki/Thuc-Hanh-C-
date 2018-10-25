@@ -1,1 +1,24 @@
+#include <iostream>
+using namespace std;
+int a,y; float rate;
+void nhap()
+{
+	cout<<"Enter initial amount: ";cin>>a;
+	cout<<"Enter number of years: ";cin>>y;
+	cout<<"Enter interest rate (percent per year): ";cin>>rate;
+}
+int tinh()
+{
+	float S=a;
+	for (int i=1; i<=y;i++)
+	{
+		S+=S*rate;
+	}
+	return S;
+}
+int main()
+{
+	nhap();
+	cout<<"At the end of "<<y<<" years, you will have "<<tinh()<<" dollars.";
+}
 
